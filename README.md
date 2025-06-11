@@ -19,7 +19,7 @@ Zero-shot recognition was conducted using both `Whisper-large-v2` and `Whisper-m
 - `zs_whisper_lgv2.py`: for Whisper-large-v2
 - `zs_whisper_m.py`: for Whisper-medium  
 Location:  
-`./whisper_fine-tuning_asd/whisper_zero_shot/`
+`./whisper_zero_shot/`
 
 > Note: All parameters (model paths, data paths, etc.) are hard-coded into the scripts.
 
@@ -28,7 +28,7 @@ Location:
 - `transcription_ZS_large-v2/`
 - `transcription_ZS_m/`  
 Located at:  
-`./whisper_fine-tuning_asd/whisper_zero_shot/`
+`./whisper_zero_shot/`
 
 ---
 
@@ -39,7 +39,7 @@ Located at:
 Each experimental group (e.g., ADHD+ASD) has its own Python script and output directory.
 
 - Example script:  
-`./whisper_fine-tuning_asd/whisper_ft/adhd_asd/whisper_ft_adhd_asd.py`
+`./whisper_ft/adhd_asd/whisper_ft_adhd_asd.py`
 
 - All training configs (model name, paths, hyperparameters) are defined inside the script;
 - Output includes trained checkpoints and training logs, stored in group-specific folders.
@@ -65,7 +65,7 @@ Parameter-efficient fine-tuning is implemented using HuggingFace's [`peft`](http
 Sentence-level prediction results (WER, CER) are stored in:
 
 ```
-./whisper_fine-tuning_asd/result/whisper_eval_sentence/
+.whisper_eval_sentence/
 ```
 
 ### 🎼 Prosodic Feature Extraction
@@ -73,7 +73,7 @@ Sentence-level prediction results (WER, CER) are stored in:
 The following script extracts prosodic descriptors (pitch, intensity, jitter, shimmer, etc.) and generates visualizations:
 
 ```
-./whisper_fine-tuning_asd/result/features_analysis/prosody_analysis.py
+./features_extract/prosody_analysis.py
 ```
 
 ### 📊 Statistical Analysis
@@ -81,7 +81,7 @@ The following script extracts prosodic descriptors (pitch, intensity, jitter, sh
 All scripts for statistical testing and correlation analysis are located in:
 
 ```
-./whisper_fine-tuning_asd/result/statistical_analysis/
+./statistical_analysis/
 ```
 
 These scripts investigate the relationship between prosody/disfluency and ASR performance.
